@@ -4,7 +4,11 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch index.ts"
+    "dev": "tsx watch index.ts",
+    "build:next": "cd next-app && npx next build",
+    "build:express": "tsc -p tsconfig.json",
+    "build": "npm run build:next && npm run build:express",
+    "start": "NODE_ENV=production node index.js"
   },
   "keywords": [],
   "author": "",
